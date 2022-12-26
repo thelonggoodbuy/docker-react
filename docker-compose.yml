@@ -11,6 +11,7 @@ services:
       - .:/app
   
   tests:
+    stdin_open: true
     build:
       context: .
       dockerfile: Dockerfile.dev

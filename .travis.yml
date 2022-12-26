@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+
+before_install:
+  - docker build -t thelonggoodbuy/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run thelonggoodbuy/docker-react npm run test -- --coverage
